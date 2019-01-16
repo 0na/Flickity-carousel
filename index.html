@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <style>
 
     </style>
@@ -19,42 +19,45 @@
     <header>
         <h1>Places I would like to see</h1>
 
-        <div class="main-carousel" flickity-page-dots='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-            <div class="carousel-cell" style="background-image: url(/images/wietnam.jpg)" ;>
+        <div class="carousel" data-flickity='{ "pageDots": false }'>
+            <div class="carousel-cell" id="carousel-cell1" style="background-image: url(/images/wietnam.jpg)" ;>
                 <div class="container">
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                         laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
                 </div>
             </div>
-            <div class="carousel-cell" style="background-image: url(/images/wietnam.jpg)" ;>
+            <div class="carousel-cell" id="carousel-cell2" style="background-image: url(/images/wietnam.jpg)" ;>
                 <div class="container">
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                         laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
                 </div>
             </div>
-            <div class="carousel-cell" style="background-image: url(/images/wietnam.jpg)" ;>
+            <div class="carousel-cell" id="carousel-cell3" style="background-image: url(/images/wietnam.jpg)" ;>
                 <div class="container">
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                         laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
                 </div>
             </div>
-            <div class="carousel-cell" style="background-image: url(/images/wietnam.jpg)" ;>
+            <div class="carousel-cell" id="carousel-cell4" style="background-image: url(/images/wietnam.jpg)" ;>
                 <div class="container">
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                         laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
                 </div>
             </div>
-            <div class="carousel-cell" style="background-image: url(/images/wietnam.jpg)" ;>
+            <div class="carousel-cell" id="carousel-cell5" style="background-image: url(/images/wietnam.jpg)" ;>
                 <div class="container">
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
                         laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
                 </div>
             </div>
         </div>
+        <div class="progress-bar"></div>
 
-
-
-
+        <div class="button-group">
+            <button class="button button--first">Restart</button>
+        </div>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script src="vendor/flickity.pkgd.js"></script>
         <script src="vendor/flickity.pkgd.min.js"></script>
         <script src="js/script.js"></script>
 </body>
