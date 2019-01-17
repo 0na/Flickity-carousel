@@ -19,7 +19,10 @@
     <header>
         <h1>Places I would like to see</h1>
 
-        <div class="carousel" data-flickity='{ "pageDots": false }'>
+        <div class="carousel" data-flickity='{ 
+            "pageDots": false,
+           "hash": true 
+        }'>
             <div class="carousel-cell" id="carousel-cell1" style="background-image: url(/images/wietnam.jpg)" ;>
                 <div class="container">
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -52,13 +55,23 @@
             </div>
         </div>
         <div class="progress-bar"></div>
-
+        <p>
+            Jump to:
+            <a href="#carousel-cell1">Photo 1</a>,
+            <a href="#carousel-cell2">Photo 2</a>,
+            <a href="#carousel-cell3">Photo 3</a>,
+            <a href="#carousel-cell4">Photo 4</a>,
+            <a href="#carousel-cell5">Photo 5</a>
+        </p>
         <div class="button-group">
-            <button class="button button--first">Restart</button>
+            <button class="restart">Restart</button>
         </div>
+
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
         <script src="vendor/flickity.pkgd.js"></script>
         <script src="vendor/flickity.pkgd.min.js"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script src="js/script.js"></script>
 </body>
 

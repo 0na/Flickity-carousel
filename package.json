@@ -46,7 +46,6 @@
   "homepage": "https://github.com/0na/learning-git-7.4#readme",
   "description": "",
   "dependencies": {
-    "flickity": "^2.1.2",
     "flickity-hash": "^1.0.3",
     "flickity-imagesloaded": "^2.0.0",
     "gulp-autoprefixer": "^6.0.0",
