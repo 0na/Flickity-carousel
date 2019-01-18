@@ -6,51 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flicky Carousel</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+
     <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
     <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <style>
 
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Places I would like to see</h1>
-    </header>
-    <div class="carousel" data-flickity='{ 
-            "pageDots": false,
-           "hash": true 
-        }'>
-        <div class="carousel-cell" id="carousel-cell1" style="background-image: url(/images/Machu-pikchu.jpeg)" ;>
-            <div class="container">
-                <p>Sed ut perspiciatis undeluptatem accusantium doloremque
-                    laudantium, </p>
-            </div>
+
+
+    <div class="carousel" data-flickity='{ "hash": true }'> </div>
+
+    <script id="carousel-template" type="x-tmpl-mustache">
+        <div class="carousel-cell" style='background-image: url("{{image}}")'>
+          <div class =”container”>
+            <h1> {{ title }} </h1>
+                {{{description}}}
+          </div>
         </div>
-        <div class="carousel-cell" id="carousel-cell2" style="background-image: url(/images/pchilippines.jpeg)" ;>
-            <div class="container">
-                <p>Sed ut perspiciatis undet voluptatem accusantium doloremque
-                    laudantium, ts et quasi architecto</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell3" style="background-image: url(/images/bali.jpeg)" ;>
-            <div class="container">
-                <p>Sed ut perspiciatis unde omnis iluptatem accusantium doloremque
-                    laudantium, totam ruasi architecto</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell4" style="background-image: url(/images/norway.jpeg)" ;>
-            <div class="container">
-                <p>Sed ut perspiciatis itatis et quasi architecto</p>
-            </div>
-        </div>
-        <div class="carousel-cell" id="carousel-cell5" style="background-image: url(/images/wietnam.jpg)" ;>
-            <div class="container">
-                <p>Sed ut perspiciatillo inventore veritatis et quasi architecto</p>
-            </div>
-        </div>
-    </div>
+    </script>
+
+    <script>
+        var slideData = [{
+                image: "/images/Machu-pikchu.jpeg",
+                title: " Ancient city",
+                description: "<p>The Incas built houses, fields and temples by cutting the rock on the mountain so it was flat</p>"
+            },
+            {
+                image: "/images/pchilippines.jpeg",
+                title: "Island",
+                description: "<p>The Philippines' location on the Pacific Ring of Fire and close to the equator makes the Philippines prone to earthquakes and typhoons</p>"
+            },
+            {
+                image: "/images/bali.jpeg",
+                title: "Island of the Gods",
+                description: "<p>Bali is one of more than 17,000 islands in the Indonesian archipelago</p>"
+            },
+            {
+                image: "/images/norway.jpeg",
+                title: "Fiords",
+                description: "<p>It is ranked as one of the best countries to live in and has one of the lowest crime rates in the world. </p>"
+            },
+            {
+                image: "/images/wietnam.jpg",
+                title: "Nature",
+                description: "<p> it is the 15th most populous country in the world</p>"
+            },
+        ]
+    </script>
+
+
+
     <div class="progress-bar"></div>
     <div class="places">
         Jump to:
@@ -60,42 +69,15 @@
         <a href="#carousel-cell4">Norway</a>
         <a href="#carousel-cell5">Wietnam</a>
     </div>
-    <div class="button-group">
-        <button class="restart">Restart</button>
-    </div>
-
-    <script>
-        var imagesElement = [{
-                image: 'Holiday1',
-                title: '2018',
-                description: < p > Lorem ipsum. < /p> <img src="http:/ / via.placeholder.com / 400 x200 " alt="
-                Photo placeholder ">
-            },
-            {
-                image: 'Holiday2',
-                title: '2017',
-                description: < p > Lorem ipsum. < /p> <img src="http:/ / via.placeholder.com / 400 x200 " alt="
-                Photo placeholder ">
-            },
-            {
-                image: 'Holiday3',
-                title: '2019',
-                description: < p > Lorem ipsum. < /p> <img src="http:/ / via.placeholder.com / 400 x200 " alt="
-                Photo placeholder ">
-            }
-        ];
-    </script>
+    <div class="button-group"> <button class="restart">Restart</button>
 
 
 
+        <script src="vendor/flickity.pkgd.min.js"></script>
+        <script src="vendor/hash.js"></script>
+        <script src="vendor/mustache.js"></script>
+        <script src="js/script.js"></script>
 
-
-
-
-    <script src="vendor/flickity.pkgd.min.js"></script>
-    <script src="vendor/hash.js"></script>
-    <script src="vendor/mustache.js"></script>
-    <script src="js/script.js"></script>
 
 </body>
 
