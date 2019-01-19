@@ -41,3 +41,35 @@ buttonGroup.addEventListener('click', function (event) {
     var index = buttons.indexOf(event.target);
     flkty.select(index);
 });
+
+
+//MAPA GOOGLE
+window.initMap = function () {
+    // Współrzędne z tablicy z html (coords-wspolrzędne)
+    var photoLocation = slideData[0].coords; // pobiera współrzędne miejsc z kodu html. DZIAŁA
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: photoLocation //DZIAŁA
+    });
+
+    //DODAWANIE MARKERóW W PĘTLI
+    var markerMap = [];
+    for (var i = 0; i < slideData.length; i++) {
+        markerMap.push(new google.maps.Marker({
+            position: slideData[i].coords,
+            map: map
+        })); //DZIAŁA (5 markerów na stronie)
+    }
+
+
+    // Kliknięcie na marker - przeniesienie do zdjęcia ze slajdu
+    //1. Pętla przez wszystkie markery, 
+    //2. Event - przycisniecie markera [i] przenosi do slide.data[i].image
+    // 3 Przesuwanie slajdu, zmiana pozycji na mapie
+    //  for (var i = 0; i < markerMap.length; i++) {
+    //      marker[i].addListener('click', function () {
+    //       map.panTo(slideData[i].image);
+    // map.setZoom(5);
+    //      });
+    ////   }
+}

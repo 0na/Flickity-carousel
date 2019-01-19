@@ -14,8 +14,6 @@
 </head>
 
 <body>
-
-
     <div class="carousel" data-flickity='{ "hash": true }'> </div>
 
     <script id="carousel-template" type="x-tmpl-mustache">
@@ -31,27 +29,47 @@
         var slideData = [{
                 image: "/images/Machu-pikchu.jpeg",
                 title: " Ancient city",
-                description: "<p>The Incas built houses, fields and temples by cutting the rock on the mountain so it was flat</p>"
+                description: "<p>The Incas built houses, fields and temples by cutting the rock on the mountain so it was flat</p>",
+                coords: {
+                    lat: -13.164,
+                    lng: -72.544
+                }
             },
             {
                 image: "/images/pchilippines.jpeg",
                 title: "Island",
-                description: "<p>The Philippines' location on the Pacific Ring of Fire and close to the equator makes the Philippines prone to earthquakes and typhoons</p>"
+                description: "<p>The Philippines' location on the Pacific Ring of Fire and close to the equator makes the Philippines prone to earthquakes and typhoons</p>",
+                coords: {
+                    lat: 12.750,
+                    lng: 122.731
+                }
             },
             {
                 image: "/images/bali.jpeg",
                 title: "Island of the Gods",
-                description: "<p>Bali is one of more than 17,000 islands in the Indonesian archipelago</p>"
+                description: "<p>Bali is one of more than 17,000 islands in the Indonesian archipelago</p>",
+                coords: {
+                    lat: -8.456,
+                    lng: 115.270
+                }
             },
             {
                 image: "/images/norway.jpeg",
                 title: "Fiords",
-                description: "<p>It is ranked as one of the best countries to live in and has one of the lowest crime rates in the world. </p>"
+                description: "<p>It is ranked as one of the best countries to live in and has one of the lowest crime rates in the world. </p>",
+                coords: {
+                    lat: 60.500,
+                    lng: 9.099
+                }
             },
             {
                 image: "/images/wietnam.jpg",
                 title: "Nature",
-                description: "<p> it is the 15th most populous country in the world</p>"
+                description: "<p> it is the 15th most populous country in the world</p>",
+                coords: {
+                    lat: 13.290,
+                    lng: 108.426
+                }
             },
         ]
     </script>
@@ -66,12 +84,13 @@
         <a href="#carousel-cell5">Wietnam</a>
     </div>
     <div class="button-group"> <button class="restart">Restart</button>
-
+        <div id="map"></div>
         <script src="vendor/flickity.pkgd.min.js"></script>
         <script src="vendor/hash.js"></script>
         <script src="vendor/mustache.js"></script>
         <script src="js/script.js"></script>
-
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA203PD8sQ4Aj3sDzQYtPUo9e9vIV17CM0&callback=initMap">
+        </script>
 
 </body>
 
