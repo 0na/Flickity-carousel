@@ -14,6 +14,7 @@ mainElement.innerHTML = carouselElements;
 var mainElement = document.querySelector('.carousel');
 var flkty = new Flickity(mainElement, {
     cellAlign: 'left',
+    wrapAround: true,
     pageDots: false, //usuwa kropki pod karuzelą - DZIAŁA
     hash: true //włącza hash (odnosniki do linkow) - NIE DZIAŁA
 });
