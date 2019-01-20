@@ -10,10 +10,13 @@
     <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
     <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <h1>Check our destinations</h1>
+    </header>
     <div class="carousel" data-flickity='{ "hash": true }'> </div>
 
     <script id="carousel-template" type="x-tmpl-mustache">
@@ -33,7 +36,8 @@
                 coords: {
                     lat: -13.164,
                     lng: -72.544
-                }
+                },
+                populaion: 5286,
             },
             {
                 image: "images/pchilippines.jpeg",
@@ -42,7 +46,8 @@
                 coords: {
                     lat: 12.750,
                     lng: 122.731
-                }
+                },
+                populaion: 104000000,
             },
             {
                 image: "images/bali.jpeg",
@@ -51,7 +56,8 @@
                 coords: {
                     lat: -8.456,
                     lng: 115.270
-                }
+                },
+                population: 456000000,
             },
             {
                 image: "images/norway.jpeg",
@@ -60,7 +66,8 @@
                 coords: {
                     lat: 60.500,
                     lng: 9.099
-                }
+                },
+                populaion: 5258000000,
             },
             {
                 image: "images/wietnam.jpg",
@@ -69,14 +76,16 @@
                 coords: {
                     lat: 13.290,
                     lng: 108.426
-                }
+                },
+                population: 9554000000,
             },
         ]
     </script>
 
     <div class="progress-bar"></div>
+
     <div class="places">
-        Jump to:
+        <p><i>Destinations:</i></p>
         <a href="#carousel-cell1">Machu Picchu</a>
         <a href="#carousel-cell2">Philippines</a>
         <a href="#carousel-cell3">Bali</a>

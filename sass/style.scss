@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
 * {
     box-sizing: border-box;
 
@@ -5,14 +7,14 @@
 
 
 body {
-    font-family: sans-serif;
+    font-family: 'Merriweather', serif;
+    background-color: #eaeaea;
 }
-
-
 
 header {
     text-align: center;
     text-transform: uppercase;
+    color: #335977;
 }
 
 .carousel {
@@ -38,16 +40,16 @@ header {
 }
 
 .progress-bar {
-    height: 10px;
-    background: #dfffce;
+    height: 15px;
+    background: #335977;
 }
 
 .places {
     a {
         text-decoration: none;
-        margin: 5px;
+        margin: 10px;
         text-transform: uppercase;
-        color: #000;
+        color: #335977;
     }
 }
 
@@ -56,7 +58,8 @@ header {
 
     .restart {
         position: absolute;
-        top: -100px;
+        top: -150px;
+        left: -40px;
         margin-left: 5%;
         -moz-box-shadow: -2px 1px 12px 0px #000000;
         -webkit-box-shadow: -2px 1px 12px 0px #000000;
@@ -64,8 +67,8 @@ header {
         background-color: black;
         -moz-border-radius: 36px;
         -webkit-border-radius: 36px;
-        border-radius: 36px;
-        border: 3px solid #000000;
+        border-radius: 10px;
+        border: 3px solid #335977;
         display: inline-block;
         cursor: pointer;
         color: #ffffff;
@@ -84,4 +87,5 @@ header {
 #map {
     height: 450px;
     width: 100%;
+    border: 0.5px solid #335977;
 }
