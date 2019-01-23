@@ -43,17 +43,16 @@ window.initMap = function () {
     });
 
     //DODAWANIE MARKERóW W PĘTLI
-    var markerMap = []; //tablica wszystkich pięciu markerów
-    for (var i = 0; i < slideData.length; i++) { //petla po calym kodzie z html
-        markerMap.push(new google.maps.Marker({
-            position: slideData[i].coords, //dodanie po kolei kazdej lokalizacji
-            map: map, //na mapie
-        })); //DZIAŁA (5 markerów na stronie)
-        // NIE DZIALA
-        markerMap[i].addListener("click", function () {
-            flkty.select(i); //tylko to działa z odwolaniem do 0- tresc zadania : Wewnątrz tej akcji ma wykonywać się bardzo podobny kod do tego, który wykonuje się w reakcji na kliknięcie guzika "Reset". Jedyna różnica, to że zamiast do slajdu o indeksie 0, karuzela ma się przewijać do slajdu o indeksie i (zakładając, że Twoja pętla używa zmiennej i jako iteratora).
+    slideData.forEach(function (slide, index) {
+        const element = new google.maps.Marker({
+            position: slide.coords,
+            map: map
+        });
+
+        element.addListener('click', function () {
+            flkty.select(index);
         })
-    }
+    });
     //Kada zmiana slajdu zmienia pozycje markera na mapie DZIALA 
     flkty.on("change", function (index) {
         map.panTo(slideData[index].coords);
